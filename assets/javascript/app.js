@@ -14,52 +14,52 @@ $(document).on('click', '#reset', function() {
 var questions = [{
     question: "Who is commonly credited as the founder of hip-hop?",
     answers: ["Afrika Bambaataa", "Grand Wizzard Theodore", "DJ Kool Herc", "Grandmaster Flash"],
-    image: "../images/koolherc.jpg",
+    image: "assets/images/koolherc.jpg",
     correctAnswer: "DJ Kool Herc"
 }, {
     question: "Who was the first rap group signed to a major label?",
     answers: ["Fearless Four", "Grandmaster Flash & The Furious Five", "The Sugarhill Gang", "Treacherous Three"],
-    image: "../images/fearlessfour.jpg",
+    image: "assets/images/fearlessfour.jpg",
     correctAnswer: "Fearless Four"
 }, {
     question: "2Pac made his recorded debut with which group?",
     answers: ["Bone Thugs-N-Harmony", "Black Moon", "Digital Underground","RBL Posse"],
-    image: "../images/digital.jpg",
+    image: "assets/images/digital.jpg",
     correctAnswer: "Digital Underground"
 }, {
     question: "Which New York rapper's father created the logo for Bad Boy Records?",
     answers: ["Joey Bada$$", "A$AP Ferg", "Tekashi 6ix9ine", "A Boogie Wit Da Hoodie"],
-    image: "../images/ferg.jpg",
+    image: "assets/images/ferg.jpeg",
     correctAnswer: "A$AP Ferg"
 }, {
     question: "In which city was No Limit Records founded?",
     answers: ["Baton Rouge, LA", "New Orleans, LA", "Port Arthur, TX", "Richmond, CA"],
-    image: "../images/richmond.jpg",
+    image: "assets/images/richmond.jpg",
     correctAnswer: "Richmond, CA"
 }, {
     question: "What was the first record to feature the Def Jam logo?",
     answers: ["I Need A Beat by LL Cool J", "It's Yours by T La Rock and Jazzy J", "Def Jam by Jazzy Jay", "Rock Hard by Beastie Boys"],
-    image: "../images/itsyours.jpg",
+    image: "assets/images/itsyours.jpg",
     correctAnswer: "It's Yours by T La Rock and Jazzy J"
 }, {
     question: "Pitbull was originally signed to which label?",
     answers: ["Slip-N-Slide Records", "TVT Records", "Priority Records", "Luke Records"],
-    image: "../images/luke.jpg",
+    image: "assets/images/luke.jpg",
     correctAnswer: "Luke Records"
 } , {
     question: "Who is responsible for the signature look of '90s Cash Money and No Limit releases?",
     answers: ["Pen & Pixel", "Zombart", "Glen E. Friedman", "Eric Haze"],
-    image: "../images/penpixel.jpg",
+    image: "assets/images/penpixel.jpg",
     correctAnswer: "Pen & Pixel"
 }, {
     question: 'Which future director appeared as a dancer on the 1984 program "Graffiti Rock?"',
     answers: ["Abel Ferrara", "Mario Van Peebles", "Hype Williams", "Vincent Gallo"],
-    image: "../images/princevince.jpg",
+    image: "assets/images/princevince.jpg",
     correctAnswer: "Vincent Gallo"
 }, {
     question: 'Which of these artists DID NOT appear on the cover of "Midnight Marauders" by A Tribe Called Quest?',
     answers: ["Puff Daddy", "Busta Rhymes", "Ice Cube", "Ice T"],
-    image: "../images/icecube.jpg",
+    image: "assets/images/icecube.jpg",
     correctAnswer: "Ice Cube"
 }];
 
@@ -96,7 +96,7 @@ var game = {
         clearInterval(timer);
         game.unanswered++;
         $('#content-delivery').html("<h2>Time's up!</h2>");
-        $('#content-delivery').append('<h3>The correct answer is '+questions[game.currentQuestion].correctAnswer+'.</h3>');
+        $('#content-delivery').append('<h3>The correct answer is '+questions[game.currentQuestion].correctAnswer+'.</h3> <img src="'+questions[this.currentQuestion].image+'" class="resize">');
         if (game.currentQuestion==questions.length-1) {
             setTimeout(game.results, 3000);
         } else {
@@ -126,6 +126,7 @@ var game = {
         clearInterval(timer);
         game.correct++;
         $('#content-delivery').html('<h2>Correct!</h2>');
+        $('#content-delivery').append('<img src="'+questions[this.currentQuestion].image+'" class="resize">');
         if (game.currentQuestion==questions.length-1) {
             setTimeout(game.results, 3000);
         } else {
@@ -137,7 +138,7 @@ var game = {
         clearInterval(timer);
         game.incorrect++;
         $('#content-delivery').html('<h2>Wrong!</h2>');
-        $('#content-delivery').append('<h3>The correct answer is '+questions[game.currentQuestion].correctAnswer+'.</h3>');
+        $('#content-delivery').append('<h3>The correct answer is '+questions[game.currentQuestion].correctAnswer+'.</h3> <img src="'+questions[this.currentQuestion].image+'" class="resize">');
         if (game.currentQuestion==questions.length-1) {
             setTimeout(game.results, 3000);
         } else {
