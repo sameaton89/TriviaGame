@@ -1,0 +1,100 @@
+
+body {
+    background-image: url("../images/wool.jpg");
+    
+}
+
+#container {
+    background: white;
+    margin: 0 auto;
+    width: 70%;
+    padding: 10px;
+    padding-top: 5px;
+
+}
+
+#park {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+}
+
+#logo {
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#logo-text {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 1px black;
+
+}
+
+#start-button {
+    background-color: black;
+    color: white;
+    font-family: Georgia, Verdana, Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.answer-button {
+    background-color: white;
+    color: black;
+    font-family: Georgia, Verdana, Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    border-color: black;
+    border-width: 1px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#reset {
+    background-color: white;
+    color: black;
+    font-family: Georgia, Verdana, Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    border-color: black;
+    border-width: 1px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+
+#start {
+    background-color: black;
+    padding: 10px;
+}
+
+#content-delivery{
+    font-family: georgia, verdana, arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#timer {
+    font-family: georgia, verdana, arial, sans-serif;
+    font-size: 40px;
+    margin: 20px;
+    font-weight: bold;
+}
